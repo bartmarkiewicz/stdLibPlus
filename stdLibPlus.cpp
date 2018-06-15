@@ -11,7 +11,6 @@
  * Created on 14 June 2018, 17:29
  */
 #include <iostream>
-#include <istream>
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -74,7 +73,7 @@ namespace stdPlus {
         return myVec;
     }
     double stdLibPlus::vecMax(std::vector<double> vecOfNumbs){
-            double maximum = -9999999;
+            double maximum = -900719925474099;
             for(auto item: vecOfNumbs){
                 if(item > maximum){
                     maximum = item;
@@ -83,7 +82,7 @@ namespace stdPlus {
             return maximum;
         }
    int stdLibPlus::vecMax(vector<int> vecOfNumbs){
-            int maximum = -9999999;
+            int maximum = INT_MIN ;
             for(auto item: vecOfNumbs){
                 if(item > maximum){
                     maximum = item;
@@ -92,7 +91,7 @@ namespace stdPlus {
             return maximum;
         }
     double stdLibPlus::vecMin(std::vector<double> vecOfNumbs){
-        double minimum = 9999999999;
+        double minimum = 900719925474099;
             for(auto item: vecOfNumbs){
                 if(item < minimum){
                     minimum = item;
@@ -101,7 +100,7 @@ namespace stdPlus {
             return minimum;
     }
     int stdLibPlus::vecMin(std::vector<int> vecOfNumbs){
-        int minimum = 9999999999;
+        int minimum = INT_MAX;
             for(auto item: vecOfNumbs){
                 if(item < minimum){
                     minimum = item;
