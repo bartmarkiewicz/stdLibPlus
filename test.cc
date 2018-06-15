@@ -18,7 +18,12 @@ int main()
     cout << "Trimmed : " << trimmedString << trimmedString << endl;
     for(auto i: stdLibPlus::range(4,10)){
         cout << i << endl;
-    }
+    };
+    vector<int> myVec(10); 
+    myVec = stdLibPlus::range(-5, 23, 2);
+    cout << stdLibPlus::vecMax(myVec);
+    cout << "\n Minimum - " << stdLibPlus::vecMin(myVec);
+    
     return 0;
 }
 

@@ -28,14 +28,14 @@ namespace stdPlus {
             vecsWords.push_back(sIndivStr);
         }
         return vecsWords;
-}
+    }
     string stdLibPlus::vectorToString(vector<string> theVec, char separator){
         string myString;
         for(int i = 0; i < theVec.size(); i++){
             myString += theVec[i]+separator;
         }
         return myString;
- }
+    }
     string stdLibPlus::trim(string theString, char trimmer){
         string newString;
         int firstIndex;
@@ -55,7 +55,7 @@ namespace stdPlus {
         newString = theString.substr(firstIndex,lastIndex-firstIndex);
         return newString;   
     }
-    std::vector<int> stdLibPlus::range(int start, int stop, int step){
+    vector<int> stdLibPlus::range(int start, int stop, int step){
         int size = (stop-start)/step;
         std::vector<int> myVec(size);
         int value = start;
@@ -65,13 +65,48 @@ namespace stdPlus {
         }
         return myVec;
     }
-    std::vector<int> stdLibPlus::range(int stop){
+    vector<int> stdLibPlus::range(int stop){
         int size = stop;
-        std::vector<int> myVec(size);
+        vector<int> myVec(size);
         for(int i=0; i<size; i++){
             myVec[i] = i;
         }
         return myVec;
     }
-
+    double stdLibPlus::vecMax(std::vector<double> vecOfNumbs){
+            double maximum = -9999999;
+            for(auto item: vecOfNumbs){
+                if(item > maximum){
+                    maximum = item;
+                }
+            }
+            return maximum;
+        }
+   int stdLibPlus::vecMax(vector<int> vecOfNumbs){
+            int maximum = -9999999;
+            for(auto item: vecOfNumbs){
+                if(item > maximum){
+                    maximum = item;
+                }
+            }
+            return maximum;
+        }
+    double stdLibPlus::vecMin(std::vector<double> vecOfNumbs){
+        double minimum = 9999999999;
+            for(auto item: vecOfNumbs){
+                if(item < minimum){
+                    minimum = item;
+                }
+            }
+            return minimum;
+    }
+    int stdLibPlus::vecMin(std::vector<int> vecOfNumbs){
+        int minimum = 9999999999;
+            for(auto item: vecOfNumbs){
+                if(item < minimum){
+                    minimum = item;
+                }
+            }
+            return minimum; 
+    }
 }

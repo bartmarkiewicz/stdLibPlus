@@ -20,6 +20,7 @@
 
 
 namespace stdPlus {
+    
     class stdLibPlus 
     {
     public:
@@ -59,7 +60,16 @@ namespace stdPlus {
         // same function but with step being 1 and start always being 0 -
         static std::vector<int> range(int stop);
 
-        
+        /*vecMax/vecMin - returns largest/smallest value from a vector of numbers
+         *Parameters-
+         vecOfNumbs : vector of numbers  
+         *returns-
+         the largest/smallest number value in the vector*/
+        static double vecMax(std::vector<double> vecOfNumbs);
+        static int vecMax(std::vector<int> vecOfNumbs);
+        static double vecMin(std::vector<double> vecOfNumbs);
+        static int vecMin(std::vector<int> vecOfNumbs);
+
     };
 }
 

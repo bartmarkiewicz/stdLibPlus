@@ -36,7 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/stdLibPlus.o \
-	${OBJECTDIR}/welcome.o
+	${OBJECTDIR}/test.o
 
 
 # C Compiler Flags
@@ -68,10 +68,10 @@ ${OBJECTDIR}/stdLibPlus.o: stdLibPlus.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/stdLibPlus.o stdLibPlus.cpp
 
-${OBJECTDIR}/welcome.o: welcome.cc
+${OBJECTDIR}/test.o: test.cc
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/welcome.o welcome.cc
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test.o test.cc
 
 # Subprojects
 .build-subprojects:
